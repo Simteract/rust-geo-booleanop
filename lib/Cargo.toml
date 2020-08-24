@@ -10,7 +10,7 @@ readme = "../README.md"
 keywords = ["gis", "geo", "geography", "geospatial"]
 
 [dependencies]
-num-traits = "0.2"
+num-traits = { version = "0.2", default-features = false}
 hashbrown = "0.8.2"
 
 [dependencies.geo-types]
