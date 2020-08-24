@@ -15,7 +15,7 @@ hashbrown = "0.8.2"
 
 [dependencies.geo-types]
  git = "https://github.com/Simteract/geo"
- rev = "4e82dabb4221963c98f8fb181f28ce388fa86358"
+ rev = "c1bf5b72e5991f52b84f93c536fffde76fd36f1b"
  default-features = false
 
 [dev-dependencies]
