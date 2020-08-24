@@ -16,10 +16,11 @@ hashbrown = "0.8.2"
 [dependencies.geo-types]
  git = "https://github.com/Simteract/geo"
  rev = "4e82dabb4221963c98f8fb181f28ce388fa86358"
+ default-features = false
 
 [dev-dependencies]
 rand = "0.3"
 
 [features]
 default = ["std"]
-std = []
+std = [ "geo-types/std" ]
