@@ -76,7 +76,7 @@ dependencies = [
 name = "geo-booleanop"
 version = "0.2.0"
 dependencies = [
- "geo-types 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "geo-types 0.4.0 (git+https://github.com/zendurix/geo?rev=dd834eb8343dcd817536b9726afdebc0280ee058)",
  "num-traits 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.3.23 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -88,6 +88,14 @@ dependencies = [
  "geo 0.12.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "geo-booleanop 0.2.0",
  "geojson 0.16.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "geo-types"
+version = "0.4.0"
+source = "git+https://github.com/zendurix/geo?rev=dd834eb8343dcd817536b9726afdebc0280ee058#dd834eb8343dcd817536b9726afdebc0280ee058"
+dependencies = [
  "num-traits 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -298,6 +306,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum failure_derive 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)" = "ea1063915fd7ef4309e222a5a07cf9c319fb9c7836b1f89b85458672dbb127e1"
 "checksum fuchsia-cprng 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "a06f77d526c1a601b7c4cdd98f54b5eaabffc14d5f2f0296febdc7f357c6d3ba"
 "checksum geo 0.12.2 (registry+https://github.com/rust-lang/crates.io-index)" = "89ce8faa25a6f5ce8ea98faa95247d66377a843408eb4418332ec37de96850b0"
+"checksum geo-types 0.4.0 (git+https://github.com/zendurix/geo?rev=dd834eb8343dcd817536b9726afdebc0280ee058)" = "<none>"
 "checksum geo-types 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)" = "866e8f6dbd2218b05ea8a25daa1bfac32b0515fe7e0a37cb6a7b9ed0ed82a07e"
 "checksum geojson 0.16.0 (registry+https://github.com/rust-lang/crates.io-index)" = "22b37e57c7f498be81360116a489ebad0b133557e87d8b4f82d51bebd1c3ef9e"
 "checksum itoa 0.4.4 (registry+https://github.com/rust-lang/crates.io-index)" = "501266b7edd0174f8530248f87f99c88fbe60ca4ef3dd486835b8d8d53136f7f"
