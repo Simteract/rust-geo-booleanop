@@ -3,11 +3,10 @@ use super::compute_fields::compute_fields;
 use super::possible_intersection::possible_intersection;
 use super::sweep_event::SweepEvent;
 use super::Operation;
+use crate::lib::*;
 use crate::splay::SplaySet;
 use geo_types::Rect;
 use num_traits::Float;
-use std::collections::BinaryHeap;
-use std::rc::Rc;
 
 pub fn subdivide<F>(
     event_queue: &mut BinaryHeap<Rc<SweepEvent<F>>>,

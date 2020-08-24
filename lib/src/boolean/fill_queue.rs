@@ -1,7 +1,7 @@
 use geo_types::{LineString, Polygon, Rect};
 use num_traits::Float;
-use std::collections::BinaryHeap;
-use std::rc::{Rc, Weak};
+
+use crate::lib::*;
 
 use super::sweep_event::SweepEvent;
 use super::Operation;
@@ -32,7 +32,14 @@ where
         if exterior {
             contour_id += 1;
         }
-        process_polygon(&polygon.exterior(), false, contour_id, &mut event_queue, cbbox, exterior);
+        process_polygon(
+            &polygon.exterior(),
+            false,
+            contour_id,
+            &mut event_queue,
+            cbbox,
+            exterior,
+        );
         for interior in polygon.interiors() {
             process_polygon(interior, false, contour_id, &mut event_queue, cbbox, false);
         }
@@ -86,10 +93,9 @@ fn process_polygon<F>(
 #[cfg(test)]
 mod test {
     use super::*;
+    use crate::lib::*;
     use geo_types::Coordinate;
     use std::cmp::Ordering;
-    use std::collections::BinaryHeap;
-    use std::rc::{Rc, Weak};
 
     fn make_simple(x: f64, y: f64, is_subject: bool) -> Rc<SweepEvent<f64>> {
         SweepEvent::new_rc(0, Coordinate { x, y }, false, Weak::new(), is_subject, true)

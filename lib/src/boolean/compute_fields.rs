@@ -1,7 +1,8 @@
 use super::sweep_event::{EdgeType, SweepEvent};
 use super::Operation;
 use num_traits::Float;
-use std::rc::Rc;
+
+use crate::lib::*;
 
 pub fn compute_fields<F>(event: &Rc<SweepEvent<F>>, maybe_prev: Option<&Rc<SweepEvent<F>>>, operation: Operation)
 where

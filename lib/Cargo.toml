@@ -11,10 +11,15 @@ keywords = ["gis", "geo", "geography", "geospatial"]
 
 [dependencies]
 num-traits = "0.2"
+hashbrown = "0.8.2"
 
 [dependencies.geo-types]
  git = "https://github.com/zendurix/geo"
- rev = "dd834eb8343dcd817536b9726afdebc0280ee058"
+ rev = "4e82dabb4221963c98f8fb181f28ce388fa86358"
 
 [dev-dependencies]
 rand = "0.3"
+
+[features]
+default = ["std"]
+std = []

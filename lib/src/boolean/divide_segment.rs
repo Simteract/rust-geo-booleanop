@@ -1,8 +1,8 @@
 use super::sweep_event::SweepEvent;
 use geo_types::Coordinate;
 use num_traits::Float;
-use std::collections::BinaryHeap;
-use std::rc::Rc;
+
+use crate::lib::*;
 
 pub fn divide_segment<F>(se: &Rc<SweepEvent<F>>, inter: Coordinate<F>, queue: &mut BinaryHeap<Rc<SweepEvent<F>>>)
 where
@@ -40,9 +40,8 @@ mod test {
     use super::super::segment_intersection::{intersection, LineIntersection};
     use super::super::sweep_event::SweepEvent;
     use super::*;
+    use crate::lib::*;
     use geo_types::Coordinate;
-    use std::collections::BinaryHeap;
-    use std::rc::{Rc, Weak};
 
     fn make_simple(
         x: f64,

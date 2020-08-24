@@ -1,8 +1,8 @@
+use crate::lib::*;
 use geo_types::Coordinate;
 use num_traits::Float;
 use std::cell::RefCell;
 use std::cmp::Ordering;
-use std::rc::{Rc, Weak};
 
 use super::helper::less_if;
 use super::signed_area::signed_area;

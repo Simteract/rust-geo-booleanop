@@ -1,9 +1,8 @@
 use super::sweep_event::SweepEvent;
 use super::Operation;
+use crate::lib::*;
 use geo_types::{LineString, Polygon};
 use num_traits::Float;
-use std::collections::HashSet;
-use std::rc::Rc;
 
 fn order_events<F>(sorted_events: &[Rc<SweepEvent<F>>]) -> Vec<Rc<SweepEvent<F>>>
 where

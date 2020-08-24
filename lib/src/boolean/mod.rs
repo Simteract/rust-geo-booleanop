@@ -2,6 +2,8 @@ use num_traits::Float;
 
 use geo_types::{Coordinate, MultiPolygon, Polygon, Rect};
 
+use crate::lib::*;
+
 pub mod compare_segments;
 pub mod compute_fields;
 mod connect_edges;

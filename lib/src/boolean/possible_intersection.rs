@@ -2,8 +2,8 @@ use super::divide_segment::divide_segment;
 use super::segment_intersection::{intersection, LineIntersection};
 use super::sweep_event::{EdgeType, SweepEvent};
 use num_traits::Float;
-use std::collections::BinaryHeap;
-use std::rc::Rc;
+
+use crate::lib::*;
 
 pub fn possible_intersection<F>(
     se1: &Rc<SweepEvent<F>>,

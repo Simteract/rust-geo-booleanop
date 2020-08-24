@@ -1,8 +1,8 @@
 use super::signed_area::signed_area;
 use super::sweep_event::SweepEvent;
+use crate::lib::*;
 use num_traits::Float;
 use std::cmp::Ordering;
-use std::rc::Rc;
 
 use super::helper::less_if;
 
@@ -53,10 +53,10 @@ where
 mod test {
     use super::super::sweep_event::SweepEvent;
     use super::compare_segments;
+    use crate::lib::*;
     use crate::splay::SplaySet;
     use geo_types::Coordinate;
     use std::cmp::Ordering;
-    use std::rc::{Rc, Weak};
 
     fn make_simple(
         contour_id: u32,
